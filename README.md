@@ -1,9 +1,9 @@
 DNA
 =====
 
-#### Metedo ####
+#### Método ####
 
-el metodo que se va usar en este caso para el lenguaje de programacion python
+el método que se va a usar en este caso para el lenguaje de programación python
 
 ```
     def hasMutation(dna:[str]) -> bool
@@ -41,18 +41,15 @@ Get
 
 ### Como correr ###
 
-deves tener instalado la dependencia de flask en python si no la tienes 
+debes tener instalado la dependencia de flask en python si no la tienes 
 
 comando para instalar
 ```
    pip install flask
 ```
 
-y lo corres como si fuera una aplicacion normal de python
+y lo corres como si fuera una aplicación normal de python
 
 ```
     py main.py
 ```
-
-[npm]: https://img.shields.io/npm/v/three
-[npm-url]: https://www.npmjs.com/package/three
