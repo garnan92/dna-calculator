@@ -1,19 +1,62 @@
 DNA
 =====
 
-[![Flask][Flask-ver]][Flask-url] 
-[![sqlite][]][https://flask.palletsprojects.com/en/1.1.x/] 
-https://www.sqlite.org/index.html
-
-*Conexion
-    |__DB.py
-*Conexion
-    |__DNA.py
-*main.py
+[![Flask][npm]][npm-url]
 
 
 
+#### Metedo ####
 
-[Flask]: Flask
-[Flask-url]: https://flask.palletsprojects.com/en/1.1.x/
-[Flask-ver]: 1.1.2
+el metodo que se va usar en este caso para el lenguaje de programacion python
+
+```
+    def hasMutation(dna:[str]) -> bool
+```
+
+#### Endpoints ####
+
+http://127.0.0.1:5000/mutation
+
+Post
+
+```
+    {
+    "dna":[
+            "GGCATA",
+            "TTTCCC",
+            "CCCTCT",
+            "CGGTAC",
+            "CTCTGA",
+            "AAGAGC"]
+    }
+```
+
+http://127.0.0.1:5000/stats
+
+Get
+
+```
+    {
+        "count_mutations": 3,
+        "count_no_mutation": 4,
+        "ratio": 0.75
+    }
+```
+
+### Como correr ###
+
+deves tener instalado la dependencia de flask en python si no la tienes 
+
+comando para instalar
+```
+   pip install flask
+```
+
+y lo corres como si fuera una aplicacion normal de python
+
+```
+    py main.py
+```
+
+[npm]: https://img.shields.io/npm/v/three
+[npm-url]: https://www.npmjs.com/package/three
