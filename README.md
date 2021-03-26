@@ -13,6 +13,10 @@ el método que se va a usar en este caso para el lenguaje de programación pytho
 
 http://127.0.0.1:5000/mutation
 
+version de servidor
+
+https://dna-calculator.herokuapp.com/mutation
+
 Post
 
 ```
@@ -28,6 +32,10 @@ Post
 ```
 
 http://127.0.0.1:5000/stats
+
+version de servidor
+
+https://dna-calculator.herokuapp.com/stats
 
 Get
 
