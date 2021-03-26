@@ -1,10 +1,6 @@
 DNA
 =====
 
-[![Flask][npm]][npm-url]
-
-
-
 #### Metedo ####
 
 el metodo que se va usar en este caso para el lenguaje de programacion python
