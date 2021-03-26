@@ -1,0 +1,67 @@
+24 mutaciones
+["TTATTTTCTAG",
+"AGGTAGTGCTG",
+"GGTCTAATCTG",
+"TCATGGCATAC",
+"GCCCTTTGCCA",
+"CCCTCCCTTTC",
+"CATGCGGTACT",
+"TTGTCTCTGAG",
+"CCCAAAGAGCT",
+"AATAGAGCTGC"]
+
+no mutaciones
+"ATGCGA",
+"CAGTGC",
+"TTATTT",
+"AGACGG",
+"GCGTCA",
+"TCACTG"
+
+no mutaciones
+"ATGCGA",
+"CAGTGC",
+"TTATTT",
+"AGACGG",
+"GCGTCA",
+"TCACTG"
+
+
+no mutaciones
+["GGCATA",
+"TTTGCC",
+"CCCTTT",
+"CGGTAC",
+"CTCTGA",
+"AAGAGC"]
+
+no mutaciones
+["GGCATA",
+ "TTTGCC",
+ "CCCTCT",
+ "CGGTAC",
+ "CTCTGA",
+ "AAGAGC"]
+
+mutaciones 2
+["GGCATA",
+ "TTTCCC",
+ "CCCTCT",
+ "CGGTAC",
+ "CTCTGA",
+ "AAGAGC"]
+
+
+"TC",
+"GC",
+"CC",
+"CA",
+"TT",
+"CC",
+"AA"
+
+
+
+
+
+
