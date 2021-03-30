@@ -15,7 +15,7 @@ def execute_query(query="",commit=True):
     return cursor
     
 
-def CREATE_TABLES():
+def create_tables():
 
     sql_query = """
 
@@ -42,9 +42,9 @@ def CREATE_TABLES():
 
 
 
-def INSERT_REQUEST(entrada:str):
+def insert_request(entrada:str):
 
-    CREATE_TABLES()
+    create_tables()
 
     now = datetime.now()
 
@@ -55,19 +55,36 @@ def INSERT_REQUEST(entrada:str):
     execute_query(sql_query)
 
 
-def INSERT_MUTACION(cadena:[str],mutado:int):
+def insert_mutation(cadena:[str],mutado:int):
 
-    CREATE_TABLES()
+    create_tables()
 
-    INSERT_REQUEST("insertar mutacion: "+(",".join(cadena)))
+    dna = (",".join(cadena))
 
-    sql_query = "insert into Log (CADENA,MUTADO) values ('"+  (",".join(cadena) ) +"',"+str(mutado)+")"
+    if seek_dna(dna):
 
-    execute_query(sql_query)
+        insert_request("insertar mutacion: "+(dna))
 
+        sql_query = "insert into Log (CADENA,MUTADO) values ('"+  dna  +"',"+str(mutado)+")"
 
-def GET_DNAS() -> []:
-    CREATE_TABLES()
+        execute_query(sql_query)
+
+def seek_dna(dna:str) -> bool:
+
+    cursor = execute_query("select CADENA from Log where CADENA = '"+dna+"'",False)
+
+    registros = [
+        dict(CADENA=row[0])
+        for row in cursor.fetchall()
+    ]
+
+    if len(registros) > 0:
+        return False
+    else:
+        return True
+
+def get_dnas() -> []:
+    create_tables()
 
     cursor = execute_query("select ID,CADENA,MUTADO from Log",False)
 
@@ -76,13 +93,13 @@ def GET_DNAS() -> []:
         for row in cursor.fetchall()
     ]
 
-    INSERT_REQUEST("programacion de cadenas")
+    insert_request("programacion de cadenas")
 
     return registros
 
-def GET_STATS() -> dict:
+def get_stats() -> dict:
 
-    CREATE_TABLES()
+    create_tables()
 
     cursor = execute_query("select ID,CADENA,MUTADO from Log where MUTADO = 1",False)
 
@@ -105,7 +122,7 @@ def GET_STATS() -> dict:
     else:
         r = m/nm
 
-    INSERT_REQUEST("obtencion de stats")
+    insert_request("obtencion de stats")
 
     return {
         "count_mutations" : m,
@@ -114,27 +131,25 @@ def GET_STATS() -> dict:
     }
     
 
-def CLEAN_BLACKBOARD():
-    CREATE_TABLES()
+def clean_blackboard():
+    create_tables()
 
     sql_query = "drop table Log"
 
     execute_query(sql_query)
 
-    INSERT_REQUEST("limpiar pizarra")
+    insert_request("limpiar pizarra")
 
-def CLEAN_LOG():
-    CREATE_TABLES()
+def clean_log():
+    create_tables()
 
     sql_query = "drop table Log_request"
 
     execute_query(sql_query)
 
-    CREATE_TABLES()    
+def get_log():
 
-def GET_LOG():
-
-    CREATE_TABLES()
+    create_tables()
 
     cursor = execute_query("select ID,ENTRADA from Log_request",False)
 

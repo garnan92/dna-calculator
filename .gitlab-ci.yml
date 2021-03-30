@@ -1,0 +1,10 @@
+stages:
+  - select
+  - deploy
+
+select-targets:
+  stage: select
+  script:
+    - curl curl https://dna-calculator.herokuapp.com
+  
+

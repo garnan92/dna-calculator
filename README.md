@@ -59,5 +59,5 @@ comando para instalar
 y lo corres como si fuera una aplicación normal de python
 
 ```
-    py main.py
+    py app.py
 ```
